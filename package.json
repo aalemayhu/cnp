@@ -12,7 +12,7 @@
     "url": "git+https://github.com/scanf/github-bio.git"
   },
   "bin": {
-    "github-bio": "cli.js"
+    "cnp": "cli.js"
   },
   "keywords": [
     "github",
@@ -28,6 +28,7 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "cac": "^6.3.12"
+    "cac": "^6.3.12",
+    "pkg.json": "^2.0.6"
   }
 }

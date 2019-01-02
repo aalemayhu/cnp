@@ -6,22 +6,31 @@ const cli = require("cac")();
 
 process.on("SIGINT", () => process.exit(0));
 
+var prettyPrint = function(data, verbose) {
+  if (verbose === true) {
+    console.log(JSON.stringify(data, null, 2));
+  }
+  console.log(`${data.length - 1} Dependencies`);
+};
+
 cli.option("--package [config]", "Choose the package", {
   default: undefined
 });
+cli.option("--verbose <verbose", "Show the dependencies", { default: false });
+// TODO: support specifying the version
 
 cli.help();
 cli.version(version);
 
 const parsed = cli.parse();
+const verbose = parsed.options.verbose;
 
-var dependencyTree = [];
 if (parsed.options.package !== undefined) {
-  dependencyTree = count.dependencyTree(parsed.options.package);
+  count.dependencyTree(parsed.options.package, res =>
+    prettyPrint(res, verbose)
+  );
 } else {
-  parsed.args.forEach(pkg => {
-    dependencyTree += count.dependencyTree(pkg);
-  });
+  parsed.args.forEach(pkg =>
+    count.dependencyTree(pkg, res => prettyPrint(res, verbose))
+  );
 }
-
-console.log(JSON.stringify(dependencyTree, null, 2));
