@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scanf/github-bio.git"
+    "url": "git+https://github.com/scanf/cnp.git"
   },
   "bin": {
     "cnp": "cli.js"
@@ -21,9 +21,9 @@
   "author": "Alexander Alemayhu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/scanf/github-bio/issues"
+    "url": "https://github.com/scanf/cnp/issues"
   },
-  "homepage": "https://github.com/scanf/github-bio#readme",
+  "homepage": "https://github.com/scanf/cnp#readme",
   "devDependencies": {
     "mocha": "^5.2.0"
   },
