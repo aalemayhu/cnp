@@ -1,0 +1,33 @@
+{
+  "name": "@scanf/cnp",
+  "version": "0.0.0",
+  "description": "count the packages for a npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo mocha test",
+    "lint": "eslint --fix *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scanf/github-bio.git"
+  },
+  "bin": {
+    "github-bio": "cli.js"
+  },
+  "keywords": [
+    "github",
+    "bio"
+  ],
+  "author": "Alexander Alemayhu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scanf/github-bio/issues"
+  },
+  "homepage": "https://github.com/scanf/github-bio#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "cac": "^6.3.12"
+  }
+}
