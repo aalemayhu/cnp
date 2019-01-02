@@ -18,6 +18,7 @@ cli.option("--package [config]", "Choose the package", {
 });
 cli.option("--verbose <verbose", "Show the dependencies", { default: false });
 // TODO: support specifying the version
+// TODO: add deep option to find dependencies of dependencies
 
 cli.help();
 cli.version(version);
